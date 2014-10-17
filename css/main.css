@@ -1,0 +1,55 @@
+/* 
+    Created on : oct, 2014, 12:42:55 PM
+    Author     : rattanak
+*/
+#playlist {
+    text-align: center;
+    color: #bd362f;
+}
+
+ul.videoList {
+    margin: 0;
+    padding: 0;
+    background: #ccc;
+}
+
+ul.videoList li {
+    list-style-type: none;
+    background: #FFF;
+    padding: 0.5em;
+    border-bottom: 1px solid #DAD1D1;
+    overflow: auto;
+      
+    display: none;  /*initially hide all video list*/
+}
+
+ul.videoList img{
+    float: left;
+    width: 40%;
+}
+
+.detail {
+    margin-left: .5em;
+    float: left;
+    width: 55%;
+    padding: 0px;
+}
+
+.detail h3 {
+    font-size: 0.9em;
+    margin: 0px;
+}
+
+.detail p {
+    font-size: 0.8em;
+    margin: 0xp !important;
+}
+
+/* First breakpoint at 576px */
+/* Inherits mobile styles, but floats containers to make columns */
+@media all and (min-width: 36em){
+    ul.videoList img {
+        width: 200px;
+    }
+
+}

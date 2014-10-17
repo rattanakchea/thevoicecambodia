@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<head>
+    <title>The Voice Cambodia 2014</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.4.min.css" />
+
+    <!--    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.css" />-->
+
+</head>
+<body>
+    <div data-role="page">
+        <div data-role="panel" id="left-panel" data-theme="a" data-display="overlay">
+            <ul id="category" data-role="listview" data-theme="b" data-insert="true" data-count-theme="a">
+                <li data-icon="delete"><a href="#" data-rel="close">Close</a></li>
+                <li data-role="list-divider">Select an event</li>
+<!--                <li><a href="#">All videos <span class="ui-li-count">55</span></a></li>-->
+            </ul>
+
+        </div>
+        <div data-role="header" data-position="fixed">
+            <h3>The Voice Cambodia</h3>
+            <a href="#left-panel" data-icon="bars" data-role="button" data-iconshadow="false">
+                Menu
+            </a>
+<!--            <a href="index.html" data-icon="refresh" data-role="button" data-iconpos="notext" >Refresh</a>-->
+        </div>
+        <div data-role="content">
+            <h4 id="playlist">The Voice Cambodia</h4>
+            <div id="content">
+                <ul class="videoList">
+                </ul>
+            </div>
+            <button id="more">Show More</button>
+        </div>
+
+        <div data-role="footer" data-position="fixed">
+            <div id="adsense">
+                Ad goes here
+            </div>
+        </div>
+    </div>
+    
+    <script id="template" type="text/x-handlebars-template">
+        {{#lists}}
+        <li>        
+            <a href="#">
+                <iframe width="250" height="150" src="//www.youtube.com/embed/{{mediaID}}"
+                    frameborder="0" allowfullscreen></iframe>
+                    <div class="detail">
+                        <h3>{{title}}</h3>
+                        <p>{{numviews}} views</p>
+                    </div>
+            </a>
+        </li>
+       {{/lists}}
+    </script>
+
+
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/jquery.mobile-1.4.4.min.js"></script>
+    <script src="js/vendor/handlebars-v2.0.0.js" type="text/javascript"></script>
+<!--    <script src="js/vendor/handlebars.runtime-v2.0.0.js" type="text/javascript"></script>-->
+    <script src="js/app.js"></script>
+</body>
+</html>

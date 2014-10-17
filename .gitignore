@@ -1,0 +1,8 @@
+# ignore netbean directory
+/nbproject
+
+# media files
+*.psd
+
+#ignore android folder
+/android
