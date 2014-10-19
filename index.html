@@ -15,7 +15,7 @@
             <ul id="category" data-role="listview" data-theme="b" data-insert="true" data-count-theme="a">
                 <li data-icon="delete"><a href="#" data-rel="close">Close</a></li>
                 <li data-role="list-divider">Select an event</li>
-<!--                <li><a href="#">All videos <span class="ui-li-count">55</span></a></li>-->
+                <!--                <li><a href="#">All videos <span class="ui-li-count">55</span></a></li>-->
             </ul>
 
         </div>
@@ -24,7 +24,7 @@
             <a href="#left-panel" data-icon="bars" data-role="button" data-iconshadow="false">
                 Menu
             </a>
-<!--            <a href="index.html" data-icon="refresh" data-role="button" data-iconpos="notext" >Refresh</a>-->
+            <!--            <a href="index.html" data-icon="refresh" data-role="button" data-iconpos="notext" >Refresh</a>-->
         </div>
         <div data-role="content">
             <h4 id="playlist">The Voice Cambodia</h4>
@@ -41,27 +41,26 @@
             </div>
         </div>
     </div>
-    
+
     <script id="template" type="text/x-handlebars-template">
         {{#lists}}
         <li>        
-            <a href="#">
-                <iframe width="250" height="150" src="//www.youtube.com/embed/{{mediaID}}"
-                    frameborder="0" allowfullscreen></iframe>
-                    <div class="detail">
-                        <h3>{{title}}</h3>
-                        <p>{{numviews}} views</p>
-                    </div>
-            </a>
+        <a href="#">
+        <iframe width="250" height="150" src="//www.youtube.com/embed/{{mediaID}}"
+        frameborder="0" allowfullscreen></iframe>
+        <div class="detail">
+        <h3>{{title}}</h3>
+        <p>{{numviews}} views</p>
+        </div>
+        </a>
         </li>
-       {{/lists}}
+        {{/lists}}
     </script>
-
 
     <script src="js/vendor/jquery.js"></script>
     <script src="js/vendor/jquery.mobile-1.4.4.min.js"></script>
     <script src="js/vendor/handlebars-v2.0.0.js" type="text/javascript"></script>
-<!--    <script src="js/vendor/handlebars.runtime-v2.0.0.js" type="text/javascript"></script>-->
+    <!--    <script src="js/vendor/handlebars.runtime-v2.0.0.js" type="text/javascript"></script>-->
     <script src="js/app.js"></script>
 </body>
 </html>

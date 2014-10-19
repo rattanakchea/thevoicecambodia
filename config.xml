@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns   = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "com.rattanak.thevoicecambodia"
+        versionCode = "1"
+        version     = "1.0.0" >
+
+    <!-- versionCode is optional and Android only -->
+
+    <name>The Voice Cambodia</name>
+
+    <description>
+- Show all video from the Voice Cambodia Show
+- Clean UI
+- Organized into playlist (blind audition, battle round, etc)
+       
+    #This app requires internet connection.
+    </description>
+    <icon src="img/icon.jpg" />
+
+    <author href="https://rattanak.com" email="rattanak.chea@gmail.com">
+        Rattanak Chea
+    </author>
+    
+     <!--
+      If you do not want any permissions to be added to your app, add the
+      following tag to your config.xml; you will still have the INTERNET
+      permission on your app, which PhoneGap requires.
+    -->
+    <preference name="permissions" value="none"/>
+
+</widget>

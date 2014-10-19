@@ -1,3 +1,4 @@
+//version 1.0
 $(function()
 {
     "use strict";
@@ -9,7 +10,7 @@ $(function()
 //request to get playlists
     https://gdata.youtube.com/feeds/api/users/TheVoiceCambodia/playlists?v=2&alt=json
 
-            var startPlaylist = "http://gdata.youtube.com/feeds/api/playlists/";
+    var startPlaylist = "http://gdata.youtube.com/feeds/api/playlists/";
     var startChannel = "http://gdata.youtube.com/feeds/api/users/";
     var numOfVideo = "&max-results=5";
     var end = "?v=2&alt=json";
@@ -40,7 +41,11 @@ $(function()
 
         },
         getVideo: function(playlistURL) {
-            console.log(playlistURL);
+            $( document ).ajaxStop(function() {
+                console.log( "Triggered ajaxStop handler." );
+              });
+            $.mobile.loading("show");
+            //console.log(playlistURL);
             //display loading gif ajax-loader.gif
             //var loading = '<img src="css/images/ajax-loader.gif" />';
             //$('#playlist').html(loading);
@@ -104,12 +109,10 @@ $(function()
                     $('#more').fadeIn();
 //                    console.log("test->");
 //                    console.log($videoList);
-
-
                 },
                 error: function(e) {
                     console.log(e.message);
-                    $('#content').html("<p>Network Error : check internet connection</p>");
+                    $('#playlist').append("<p>Try choose another category</p>");
                 }
             });
         },
@@ -170,19 +173,19 @@ $(function()
         }
     };
 
-
-
     app.init();
     app.getPlaylist();
 
     $('ul#category').on('click', 'li', function(e) {
         //get href, call api, reload the body of page
-        e.preventDefault();
-        $.mobile.loading("show");
+        e.stopPropagation();
+        
         var playlistID = $(this).find('a').attr('href').substring(1);
         var playlistURL = getPlaylistURL(playlistID);
         //call the api
         app.getVideo(playlistURL);
+        //close the panel
+        $( "#left-panel" ).panel( "close" );
 
     });
 

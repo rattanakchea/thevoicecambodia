@@ -41,3 +41,14 @@ frameborder="0" allowfullscreen></iframe>
 
 <iframe width="560" height="315" src="//www.youtube.com/embed/7Aoccl5xgqI"
 frameborder="0" allowfullscreen></iframe>
+
+
+//anonymous function
+(function(){
+
+})();
+Look closely for differences in syntax
+//jquery DOM ready
+$(function(){
+
+});
